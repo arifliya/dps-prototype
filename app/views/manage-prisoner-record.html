@@ -33,9 +33,49 @@
 
 {% block content %}
 
+<div class="mini-profile govuk-!-margin-top-7">
+    
+  <div class="mini-profile-inner">
+    <div class="mini-profile-left">
+      <img class="mini-profile-person-img" src="/public/images/prisoner-images/prisoner_5.jpg" alt="Image of Carroll, Jonathon">
+    </div>
+    <div class="mini-profile-right">
+      <ul class="mini-profile-info">
+        <li>
+          <p class="govuk-heading-s govuk-!-margin-bottom-1">
+            <a id="mini-profile-link" class="govuk-link govuk-link--no-visited-state" >{{ data['name'] or 'the person' }}</a>
+          </p>
+          <span class="govuk-body">A5046DZ</span>
+        </li>
+        <li>
+          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-0">Date of birth</span>
+          <span class="govuk-body">7 April 1993</span>
+        </li>
+        <li>
+          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-0">Establishment</span>
+          <span class="govuk-body">Moorland (HMP &amp; YOI)</span>
+        </li>
+        <li>
+          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-0">Cell number</span>
+          <span class="govuk-body">RECP</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="govuk-width-container ">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
+
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6 ">
+    <span class="govuk-caption-l">View and manage court appearances</span>
+    Enter the court appearance date and time</h1>
+
+<button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Cancel this appearance
+</button>
+
       <div class="govuk-tabs" data-module="govuk-tabs">
   <h2 class="govuk-tabs__title">
     Contents
@@ -96,7 +136,7 @@
               Friday 02 February 2026 at 14:00
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              <a class="govuk-link" href="enter-date-time.html">Change<span class="govuk-visually-hidden"> previous application number</span></a>
             </dd>
           </div>
           
@@ -108,7 +148,7 @@
               Birmingham Magistrates' Court - Victoria Law Courts, Newton St, Birmingham B4 7NA
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              <a class="govuk-link" href="what-court.html">Change<span class="govuk-visually-hidden"> previous application number</span></a>
             </dd>
           </div>
 
@@ -120,7 +160,7 @@
               In person
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              <a class="govuk-link" href="appearance-type.html">Change<span class="govuk-visually-hidden"> previous application number</span></a>
             </dd>
           </div>
 
@@ -132,7 +172,7 @@
               VIDEO LINK PLEA AND DIRECTIONS HEARING
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              <a class="govuk-link" href="enter-court-reason.html">Change<span class="govuk-visually-hidden"> previous application number</span></a>
             </dd>
           </div>
 
@@ -144,7 +184,7 @@
               Some optional comments here about the court appearance
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              <a class="govuk-link" href="comments.html">Change<span class="govuk-visually-hidden"> previous application number</span></a>
             </dd>
           </div>
           
@@ -165,7 +205,7 @@
         <div class="moj-timeline__header">
           <h2 class="moj-timeline__title">Absence cancelled</h2>
           
-            <p class="moj-timeline__byline">by Shahad Rahman (SHAHAD_RAHMAN_GEN)</p>
+            <p class="moj-timeline__byline">by Jim Riaz (JIM_RIAZ_GEN)</p>
           
         </div>
     
@@ -175,7 +215,7 @@
     
         <div class="moj-timeline__description">
           
-            Temporary absence cancelled for Paulson Nicolus
+            Court appearance cancelled for Paulson Nicolus
           
           
           
@@ -193,7 +233,7 @@
       <div class="moj-timeline__item">
     
         <div class="moj-timeline__header">
-          <h2 class="moj-timeline__title">Absence migrated</h2>
+          <h2 class="moj-timeline__title">Appearance migrated</h2>
           
         </div>
     
@@ -203,7 +243,7 @@
     
         <div class="moj-timeline__description">
           
-            Temporary absence migrated from NOMIS
+            Appearance migrated from NOMIS
           
           
           
@@ -218,8 +258,16 @@
 </div>
 
 </div>
+<div class="govuk-grid-column-one-quarter align-right">
+        <h2 class="govuk-heading-m">Related tasks</h2>
+        
+          <p><a class="govuk-link govuk-link--no-visited-state" href="enter-date-time.html">Create a new court appearance for {{ data['name'] or 'the person' }}</a></p>
+        
+
+        </div>
 </div>
 
+</div>
 {% endblock %}
 
 
